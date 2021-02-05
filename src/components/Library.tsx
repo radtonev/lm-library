@@ -75,10 +75,12 @@ export default class Library extends React.Component {
       })
       .catch((error) => {
           console.log(error);
-          this.informationModal.title = "Error";
-          this.informationModal.message = "Failed to load books. <br>Error message: " + error.message;
-          this.informationModal.show = true;
-          this.appStatus.busy = false;
+          if(error){
+		  console.log(error);
+		  this.informationModal.title = "Error";
+		  this.informationModal.message = error.message;
+		  this.informationModal.show = true;
+	  }
       });
   }
 
