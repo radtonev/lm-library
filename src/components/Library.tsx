@@ -45,10 +45,12 @@ export default class Library extends React.Component {
           this.getAllBooks();
       })
       .catch((error) => {
-          console.log(error);
-          this.informationModal.title = "Error";
-          this.informationModal.message = error.message;
-          this.informationModal.show = true;
+          if(error){
+		  console.log(error);
+		  this.informationModal.title = "Error";
+		  this.informationModal.message = error.message;
+		  this.informationModal.show = true;
+	  }
       });
   }
 
@@ -74,7 +76,6 @@ export default class Library extends React.Component {
          this.appStatus.busy = false;     
       })
       .catch((error) => {
-          console.log(error);
           if(error){
 		  console.log(error);
 		  this.informationModal.title = "Error";
