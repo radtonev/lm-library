@@ -206,11 +206,11 @@ export default class Library extends React.Component {
     	  <Table className="table-dark table-striped">
           <thead>
             <tr>
-              <th className="col-md-1">ID</th>
-              <th className="col-md-4">Title</th>
-              <th className="col-md-3">Author</th>
-	            <th className="col-md-2">Available copies</th>
-              <th className="col-md-3">Actions</th>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Author</th>
+	      <th>Available copies</th>
+              <th>Actions</th>
             </tr>
           </thead>
 
